@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat room</title>
+    <link rel="stylesheet" href="./chatrooms.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+
+
+<body>
+    
+    <header>
+        <img src="Nchat.jpg" alt="" width="78px" height="60px" >
+
+        <a href="./home.html"> <button>HOME</button></a>
+        <a href="./contactus.html" target="_blank"><button>CONTACT</button></a>
+        <a href="./aboutus.html" target="_blank"> <button>ABOUT</button></a>
+        <!-- <a href="./login.html" target="_blank"><button>LOGIN</button></a> -->
+        <a href="./Signup.html" target="_blank"> <button>SIGN-UP</button></a>
+        <!-- <a href="./Signin.html" target="_blank"> <button>SIGN-IN</button></a> -->
+    </header>
+    
+   
+
+    <nav>
+        <a href="#chat-rooms">Chat Rooms</a>
+        <!-- <a href="#groups">Groups</a>
+        <a href="#strangers">Strangers</a> -->
+    </nav>
+    <center><h1>Chat Application</h1></center>
+    <section id="chat-rooms">
+        <center><h2> Friends Chat Room</h2></center>
+        <div id="chat-container">
+            <div id="room-list">
+               <center> <h2>Friends Chat</h2></center>
+                <ul id="room-list-ul">
+                    <li onclick="joinRoom('Sampath')">
+                        <img src="s symbol.jpg" alt="Sampath Logo" width="50" height="30">
+                        Sampath</li>
+                    <li onclick="joinRoom('Vijay')">
+                        <img src="v.jpg" alt="Vijay Logo" width="50" height="30">
+                        Vijay</li>
+                    <li onclick="joinRoom('Mahesh')">
+                        <img src="m.jpg" alt="Mahesh logo" width="50" height="30">
+                        Mahesh</li>
+                    <li onclick="joinRoom('Masthan')">
+                        <img src="ma.jpg" alt="Masthan logo" width="50" height="30">
+                        Masthan</li>
+                    <li onclick="joinRoom('Raju')">
+                        <img src="r.jpg" alt="Mahesh logo" width="50" height="30">
+                        Raju</li>
+                    <li onclick="joinRoom('Ganesh')">
+                        <img src="g.jpg" alt="Ganesh logo" width="50" height="30" >
+                        Ganesh</li>
+                    <li onclick="joinRoom('Surya')">
+                        <img src="sa.jpg" alt="Surya logo"  width="50" height="30">
+                        Surya</li>
+                    <li onclick="joinRoom('Shiva')">
+                        <img src="sh.jpg" alt="Shiva logo"  width="50" height="30" >
+                        Shiva</li>
+                    <li onclick="joinRoom('Charan')">
+                        <img src="c.jpg" alt="Charan logo" width="50" height="30">
+                        charan</li>
+                    <li onclick="joinRoom('Naga sai')">
+                        <img src="nag.jpg" alt="Naga sai logo" width="50" height="30" >
+                        Naga sai</li>
+                    <li onclick="joinRoom('Nagendra')">
+                        <img src="nar.jpg" alt="nagendra logo"  width="50" height="30" >
+                        nagendra</li>
+                    <li onclick="joinRoom('Batthaih')">
+                        <img src="ba.jpeg" alt="bathaiah logo"  width="50" height="30">
+                        Bathaiah</li>
+                </ul>
+                <!-- <div id="input-box">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>  -->
+             </div>
+            <div id="chat-box">
+                <h2>Chat Room</h2>
+                <h2 id="current-room">Welcome to the Friends Chat Room!</h2>
+                <div id="messages">
+                    
+                </div>
+                <div id="input-box">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+               
+            </div>
+            
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 Chat Application. All rights reserved.</p>
+        </footer>
+        
+    </section>  
+    
+    <!-- <section id="chat-rooms">
+        <h2 id="current-room">Chatting in Chat Rooms</h2>
+        <div id="chat-container">
+            <div id="room-list">
+                <h2>Rooms</h2>
+                <ul id="room-list-ul">
+                    <li onclick="joinRoom('room1')">Room 1</li>
+                    <li onclick="joinRoom('room2')">Room 2</li>
+                    <li onclick="joinRoom('room3')">Room 3</li>
+                    <li onclick="joinRoom('room1')">Room 4</li>
+                    <li onclick="joinRoom('room2')">Room 5</li>
+                    <li onclick="joinRoom('room3')">Room 6</li>
+                    <li onclick="joinRoom('room3')">Room 7</li>
+    
+                    <!-- Add more rooms as needed -->
+                <!-- </ul>
+            </div>
+            <div id="chat-box">
+                <div id="messages"></div>
+                <div id="input-box">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="groups">
+        <h2>Groups</h2>
+        <div id="group-chat-box">
+            Placeholder content for group chat -->
+            <!-- <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+        </div>
+        <div id="group-input-box">
+            <input type="text" id="group-message-input" placeholder="Type your message...">
+            <button onclick="sendGroupMessage()">Send</button>
+        </div>
+    </section>
+    
+    <section id="strangers">
+        <h2>Strangers</h2>
+        <div id="stranger-chat-box"> -->
+            <!-- Placeholder content for stranger chat -->
+            <!-- <div class="user-message">You: Hi there!</div>
+            <div class="bot-message">Bot: You are now chatting with a stranger.</div>
+            <div class="user-message">Stranger: Hello!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+            <div class="user-message">User1: Hello, everyone!</div>
+            <div class="user-message">User2: How's it going?</div>
+            <div class="bot-message">Bot: Welcome to the group chat!</div>
+        </div>
+        <div id="stranger-input-box">
+            <input type="text" id="stranger-message-input" placeholder="Type your message...">
+            <button onclick="sendStrangerMessage()">Send</button>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 Chat Application. All rights reserved.</p>
+    </footer> -->
+    
+    <script>
+        function joinRoom(room) {
+            document.getElementById('current-room').innerText = `Chatting with ${room}`;
+        }
+    
+        const sampleMessages = [
+            "Hello",
+            "how are you?",
+            "What's up?",
+            "Nice to meet you!",
+            "How's your day going?",
+            "I'm here to chat!",
+            "Tell me a joke!",
+            "Do you have any hobbies?",
+            "What's your favorite movie?",
+            "How are you",
+            "where are you going",
+            "good Morning",
+            "good Evening",
+            "good Night",
+            "Hi",
+            
+            // ... add more messages as needed
+        ];
+    
+        function getRandomMessage() {
+            const randomIndex = Math.floor(Math.random() * sampleMessages.length);
+            return sampleMessages[randomIndex];
+        }
+    
+        function simulateBotResponse() {
+            const messagesDiv = document.getElementById('messages');
+            const botResponse = document.createElement('div');
+            botResponse.className = 'bot-message';
+            botResponse.innerText = `user 1: ${getRandomMessage()}`;
+            messagesDiv.appendChild(botResponse);
+        }
+    
+        function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const messagesDiv = document.getElementById('messages');
+    
+            const message = messageInput.value.trim();
+            if (message !== '') {
+                appendUserMessage(message);
+                simulateBotResponse();
+                messageInput.value = '';
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }
+        }
+    
+        function appendUserMessage(message) {
+            const messagesDiv = document.getElementById('messages');
+            const userMessage = document.createElement('div');
+            userMessage.className = 'user-message';
+            userMessage.innerText = `You: ${message}`;
+            messagesDiv.appendChild(userMessage);
+        }
+    </script>
+    
+
+    
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+/* fieldset {
+    display: inline;
+    background-color: bisque;
+
+} */
+
+button {
+    padding: 12px;
+    border-radius: 15px;
+    background-color: rgb(66, 66, 250);
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: black 0px 0px 0px 2px;
+}
+footer {
+    /* margin-top: auto; */
+    padding: 20px;
+    background-color: orange;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0%;
+    width: 100;
+    
+    
+   
+}
+
+
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+}
+
+.login-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.login-form {
+    padding: 2em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+} */

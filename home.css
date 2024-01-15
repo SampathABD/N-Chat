@@ -1,0 +1,82 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url('tree\ pic.jpg' );
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-repeat: fixed;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+
+.myimg {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.myimg:hover {
+    transform: scale(1.1);
+    box-shadow: orange 0px 0px 2px 2px;
+
+}
+
+button {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: yellow 0px 0px 2px 2px;
+}
+
+footer {
+    /* padding: 20px;
+    background-color: orange;
+    color: white;
+    position:relative;
+    bottom: 0;
+    width: 100;
+    margin-top: auto; */
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    width: 100;
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+   
+}
+
+.homepage-content {
+    color: aliceblue;
+}
+
+.guest {
+    background-color: green;
+    color: aliceblue;
+}
+
+.guest:hover {
+    box-shadow: green 0px 0px 1px 1px;
+}

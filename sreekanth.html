@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add your Bootstrap CSS link here if not already included -->
+    <link rel="stylesheet" href="path/to/bootstrap.css">
+    <style>
+        .accordion-item {
+            display: none;
+        }
+
+        .accordion-item.active {
+            display: block;
+        }
+        /* Your existing styles */
+    </style>
+    <title>Contact List</title>
+</head>
+<body>
+
+    <div id="accordionExample">
+
+        <div class="accordion-item active" id="contact1">
+            
+            <!-- Your existing content for contact 1 -->
+        </div>
+
+        <div class="accordion-item" id="contact2">
+            <!-- Your existing content for contact 2 -->
+        </div>
+
+        <!-- Repeat the above structure for other contacts -->
+
+    </div>
+
+    <button onclick="prevContact()">Previous</button>
+    <button onclick="nextContact()">Next</button>
+
+    <script>
+        var currentContact = 1; // Start with the first contact
+
+        function showContact(contactNumber) {
+            // Hide all contacts
+            var allContacts = document.querySelectorAll('.accordion-item');
+            allContacts.forEach(function(contact) {
+                contact.classList.remove('active');
+            });
+
+            // Show the selected contact
+            var selectedContact = document.getElementById('contact' + contactNumber);
+            if (selectedContact) {
+                selectedContact.classList.add('active');
+            }
+
+            currentContact = contactNumber;
+        }
+
+        // Initial display
+        showContact(currentContact);
+
+        // Function to navigate to the next contact
+        function nextContact() {
+            currentContact = (currentContact % 9) + 1;
+            showContact(currentContact);
+        }
+
+        // Function to navigate to the previous contact
+        function prevContact() {
+            currentContact = (currentContact - 2 + 9) % 9 + 1;
+            showContact(currentContact);
+        }
+    </script>
+
+    <!-- Add your Bootstrap JS script link here if not already included -->
+    <script src="path/to/bootstrap.js"></script>
+</body>
+</html>

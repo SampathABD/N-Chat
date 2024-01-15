@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Strangers</title>
+    <link rel="stylesheet" href="chattostrangers.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="Nchat.jpg" alt="" height="45px" width="65px">
+
+        <button><a href="./home.html" class="no-underline">Home</a></button>
+        <!-- <button><a href="./contact.html" class="no-underline">Contact us</a></button>
+        <button><a href="./Aboutus.html" class="no-underline">About us</a></button>
+        <button><a href="./FAQ.html" class="no-underline">FAQ</a></button> -->
+        <button><a href="./settings.html" class="no-underline">Settings</a></button>
+        <button><a href="./Signup.html" class="no-underline">Logout</a></button>
+
+    </header>
+
+
+    <div id="chatbox"></div>
+
+    <!-- <div class="myimage"> <img src="chat-room-white-text.webp" alt="" height="100px" ,width="150px"></div>
+    <div class="photo"> <img src="" alt="" height="100px",width="150px"></div>  -->
+    <!-- <div class="photo"><img src="" alt="" height="100px",width="150px"></div>></div> -->
+
+    <input class="typing" id="userInput" type="text" placeholder="Type your message here...">
+    <button id="sendButton" onclick="sendMessage()">Send</button>
+    <footer>
+        © 2024 Chat with Strangers. All rights reserved.
+        <br>
+        1234 Main St., Anytown, USA
+        <br>
+        (123) 456-7890
+        <br>
+        info@chatwithstrangers.com
+    </footer>
+    <script>
+
+        var messages = {
+            "hi": [
+                "Hello!",
+                "Hi there!",
+                "Hey!",
+                "Hi! How can I assist you today?",
+                "Greetings!",
+                "Good to see you!",
+                "Nice to meet you!",
+                "What can I do for you today?",
+                "what's up man",
+                "i'm doing well",
+                "What about you a man",
+
+            ],
+            "how are you": [
+                "i'm good",
+                "i'm fine",
+                "what about you man",
+                "I'm also fine",
+                "so I don't have feelings",
+                "but I'm here to help you",
+                "How can I assist you today?",
+                "I'm doing well",
+                "thank you!",
+                " How can I assist you today?",
+                "As an AI",
+                "I don't have feelings",
+                "but I'm functioning as expected",
+                "How can I assist you today?",
+                "I'm here and ready to assist you",
+                "How can I help you today?",
+
+            ],
+            "what are you doing": [
+                "nothing doing",
+                "playing cricket",
+                "playing basket ball",
+                "what about you",
+                "listening music",
+            ],
+            "what are the your highest studys": [
+                "my highest graduation is B.tech",
+                "i'm from nbkrist",
+                "near by nellore",
+
+            ],
+            "wishes": [
+                "good morning",
+                "good evening",
+                "good afternoon",
+                "good night",
+                "take care",
+                "sweet dreams",
+                "bye",
+            ],
+            "who are you": [
+                "i'm your friend",
+                "hey what's up",
+                "how are you",
+                "i'm fine and you",
+                "what are you doing",
+                "where you from",
+                "i'm coming from kadapa",
+            ],
+        };
+
+
+        // function sendMessage() {
+        //     var input = document.getElementById('userInput');
+        //     var chatbox = document.getElementById('chatbox');
+        //     chatbox.innerHTML += 'User1: ' + input.value + '<br>';
+        //     var lowerCaseInput = input.value.toLowerCase();
+        //     if (lowerCaseInput in messages) {
+        //         var reply = messages[lowerCaseInput][Math.floor(Math.random() * messages[lowerCaseInput].length)];
+        //         chatbox.innerHTML += 'User2: ' + reply + '<br>';
+        //     }
+        //     input.value = '';
+        //     chatbox.scrollTop = chatbox.scrollHeight; -->
+        // }
+
+        function sendMessage() {
+            var input = document.getElementById('userInput');
+            var chatbox = document.getElementById('chatbox');
+  
+            // User1 message
+            chatbox.innerHTML += '<div class="message-container user1-message">' +
+                '<span class="user-label">you:</span> ' +
+                '<span class="message">' + input.value + '</span></div>';
+  
+            var lowerCaseInput = input.value.toLowerCase();
+            if (lowerCaseInput in messages) {
+                // User2 reply
+                var reply = messages[lowerCaseInput][Math.floor(Math.random() * messages[lowerCaseInput].length)];
+                chatbox.innerHTML += '<div class="message-container user2-message">' +
+                    '<span class="user-label">Stranger:</span> ' +
+                    '<span class="message">' + reply + '</span></div>';
+            }
+  
+            input.value = '';
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+    </script>
+</body>
+
+</html>

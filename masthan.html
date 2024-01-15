@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Nchat.css">
+       
+</head>
+
+<body>
+
+    <header>
+        <img class="nchat" src="Nchat.jpg" alt="" width="39px" height="40px">
+        <a href="Friends,chan,grou.html"><button>Home</button></a>
+        <a href="contactus.html"><button>Contact</button></a>
+        <a href="aboutus.html"><button>AboutUs</button></a>
+        <a href="Signup.html"><button>signUp</button></a>
+        <a href="login.html"><button>Login</button></a>
+    </header>
+    <nav class="mynav">
+        <div class="nav1">
+            <a href="strang.html">Stranger</a>
+        </div>
+        <div class="friends">
+            <h1>Friends</h1>
+            <a href="sampath.html"><img class="stangerimg" src="sh.jpg" alt="S Logo" width="30px"
+                    height="30px"> Sampath</a>
+            <a href="masthan.html"><img class="stangerimg" src="m.jpg" alt="M Logo" width="30px"
+                    height="30px"> Masthan</a>
+            <a href="vijay.html"><img class="stangerimg" src="v.jpg" alt="V Logo" width="30px"
+                    height="30px"> Vijay</a>
+            <a href="mahesh.html"><img class="stangerimg" src="ma.jpg" alt="M Logo" width="30px"
+                    height="30px"> Mahesh</a>
+            <a href="Raju.html"><img class="stangerimg" src="r.jpg" alt="R Logo" width="30px"
+                    height="30px"> Raju</a>
+            <a href="charan.html"><img class="stangerimg" src="c.jpg" alt="C Logo" width="30px" height="30px"> Charan</a>
+            <a href="nagendra.html"><img class="stangerimg" src="nag.jpg" alt="N Logo" width="30px"                       height="30px">Nagendra</a>
+            <a href="sai.html"><img class="stangerimg" src="sa.jpg" alt="S Logo" width="30px" height="30px"> Sai</a>
+
+        </div>
+        <div class="channel_list1">
+            <div class="channel_inner">
+                <h1>Channels</h1>
+                <a href="Starsports.html"><img class="stangerimg" >#Star Sports</a>
+                <a href="discovery.html"><img class="stangerimg" >#Discovery</a>
+                <a href="Cartoon.html"><img class="stangerimg" >#Cartoon Network</a>
+                <a href="fashion.html"><img class="stangerimg" >#Fashion</a>
+                <a href="News.html"><img class="stangerimg" >#News</a>
+            </div>
+        </div>
+
+        <div class="group_outer">
+            <div class="group_inner">
+                <h1>Groups</h1>
+                <a href="Moviesgroup.html"><img class="stangerimg">@Movies group</a>
+                <a href="Talkzonegroup.html"><img class="stangerimg">@Talk zone</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="chat-box" id="chat-box">
+        <div class="header">
+            <div>
+                <span class="close-btn" onclick="closeChatBox()">&#9660;</span>
+                <h3><span style="color: red;">Masthan</span></h3>
+                <p>Location:tirupathi,chittor</p>
+            </div>
+        </div>
+        <div class="content" id="chat-content">
+            <!-- Dynamic messages will be added here -->
+        </div>
+        <div class="input-box">
+            <span class="gallery-icon">&#128443;</span>
+            <input type="text" placeholder="Type a message...">
+            <button class="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <button class="view-button" onclick="toggleChatBox()">View Chat Box</button>
+
+    <footer>
+        <center>
+            <p>@2024 All rights are reserved</p>
+        </center>
+    </footer>
+
+    <script>
+        function addMessage(content, isUser, userName, userLogo) {
+            var chatContent = document.getElementById('chat-content');
+            var newMessage = document.createElement('div');
+            newMessage.classList.add('message');
+
+            if (isUser) {
+                newMessage.classList.add('user-message');
+            }
+
+            newMessage.innerHTML = `
+      <img class="${isUser ? 'user1-logo' : 'user2-logo'}" src="${userLogo}" alt="User Logo">
+      <div>
+        <strong>${userName}</strong>: ${content}
+      </div>
+    `;
+
+            chatContent.appendChild(newMessage);
+            chatContent.scrollTop = chatContent.scrollHeight;
+        }
+
+        function receiveMessage() {
+            var messages = [
+                "Hello there!",
+                "How are you?",
+                "Nice to meet you!",
+                "Hii",
+                "Feel free to type a message!",
+                "How are you",
+                "Im fine",
+                "What about you",
+                "what are you doing",
+                "where are you from",
+                "good morning man",
+                "where are you ",
+            
+
+            ];
+
+            var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            addMessage(randomMessage, false, "Masthan", "m.jpg");
+        }
+
+        // Initial dynamic messages
+        receiveMessage();
+        addMessage("Hi, I'm User 1!", true, "Me", "sa.jpg");
+        receiveMessage();
+        addMessage("What's up?", true, "Me", "sa.jpg");
+
+        function sendMessage() {
+            var messageInput = document.querySelector('.input-box input');
+            var messageContent = messageInput.value;
+
+            if (messageContent.trim() !== '') {
+                addMessage(messageContent, true, "Me", "sa.jpg");
+                messageInput.value = '';
+                setTimeout(receiveMessage, 1000);
+            }
+        }
+
+        function closeChatBox() {
+            var chatBox = document.getElementById('chat-box');
+            var viewButton = document.querySelector('.view-button');
+
+            chatBox.style.display = 'none';
+            viewButton.style.display = 'block';
+        }
+
+        function toggleChatBox() {
+            var chatBox = document.getElementById('chat-box');
+            var viewButton = document.querySelector('.view-button');
+
+            chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
+            viewButton.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

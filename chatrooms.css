@@ -1,0 +1,127 @@
+#chat-box {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 500px; /* Set a fixed height for the chat box */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    overflow-x:hidden ;
+    /* background-image: url(); */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    background-color:burlywood;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+#chat-container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: burlywood;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#room-list, #chat-box {
+    flex: 1;
+}
+
+#room-list {
+    border-right: 1px solid orange;
+    padding: 20px;
+}
+
+#room-list h2 {
+    color:orangered;
+}
+
+#room-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#room-list li {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: green;
+    border-radius: 5px;
+}
+
+#room-list li:hover {
+    background-color:white;
+}
+
+#chat-box {
+    padding: 20px;
+    overflow-y: auto;
+}
+
+#input-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 10px;
+}
+
+#input-box input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+#input-box button {
+    padding: 8px;
+    background-color:blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+   
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+   margin-top: 1000;
+    width: 100%;
+    bottom: auto;
+}
+#chat-box {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 300px; /* Set a fixed height for the chat box */
+}
+
+.user-message, .bot-message {
+   background-color:white;
+   font-family: 'Courier New', Courier, monospace;
+}
+img{
+    border-radius: 100%;
+}
